@@ -1,0 +1,22 @@
+body {
+  background-color:#111;
+}
+.box {
+  border:1px;
+  border-color:#444;
+  background-color:#333;
+  border-radius:5px;
+  -moz-border-radius:5px;
+}
+.pad {
+  padding:10px;
+}
+.grey {
+  color:#AAA;
+}
+.justify {
+  text-align:justify;
+}
+.topmargin {
+  margin-top:20px;
+}

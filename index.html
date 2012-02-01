@@ -4,8 +4,34 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>Experty Product</title>
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#modal-from-dom").bind('show', function() {
+          var mail = $("#mail").val();
+          $("#modal_head").text("Subscribed");
+          $("#mtext").text(mail + "has been added to the mailing list");
+        });
+      });
+    </script>
   </head>
   <body>
+
+  <div id="modal-from-dom" class="modal hide fade">
+    <div class="modal-header">
+      <a href="#" class="close">&times;</a>
+      <h3 id="modal_head"></h3>
+    </div>
+    <div class="modal-body">
+      <p id="mtext">You have been subscribed to the newsletter.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn primary">OK</a>
+      <a href="#" class="btn secondary">Cancel</a>
+    </div>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -26,24 +52,38 @@
       </div>
     </div>
     <div class="row">
-      <div class="span10">
-        <p>
+      <div class="span10 box grey justify">
+        <div class="pad">
+          <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non rutrum dui. Nullam molestie purus turpis, gravida ullamcorper nulla. Nulla ac posuere lorem. Curabitur eu enim sit amet diam vulputate ultrices. Nam eu purus id dui tincidunt tincidunt. Curabitur pellentesque congue arcu vitae tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec a mi nibh, a pulvinar erat. Ut elementum pretium pulvinar. Nam posuere augue sit amet mi consectetur imperdiet. Nullam sed nunc quis lectus placerat semper eleifend eget lorem. Nullam a justo neque, non pharetra metus. Etiam varius metus ac mauris blandit porttitor sollicitudin purus placerat. 
-        </p>
-        <p>
+          </p>
+          <p>
 Vivamus ac lobortis lectus. Sed eu tristique mi. Ut molestie aliquet facilisis. Donec ut erat eu lectus ullamcorper eleifend sit amet a eros. Etiam cursus facilisis nunc id facilisis. Phasellus convallis laoreet lorem sed gravida. Duis aliquet iaculis adipiscing. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu viverra lacus.
-        </p>
+          </p>
+        </div>
       </div>
       <div class="span5 offset1">
         <img src="Eku1.jpg">
+        <h4>Sign up for our newsletter!</h4>
+        <input id="mail" type="text"/>
+        <button data-controls-modal="modal-from-dom"
+	             data-backdrop="true"
+	             data-keyboard="true"
+	             class="btn danger">Submit</button>
       </div>
     </div>
     <div class="row">
       <div class="span16">
-        <h2>Ut tempor sagittis sem eu placerat</h2>
-        <p>
+        <h2 class="topmargin">Ut tempor sagittis sem eu placerat</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span16 justify grey box">
+        <div class="pad">
+          <p>
 Nulla facilisi. Ut tempor sagittis sem eu placerat. Cras eu dui vel purus semper feugiat. Etiam nibh dui, lobortis id auctor non, blandit eget dui. Cras vel pharetra risus. Integer auctor auctor feugiat. Morbi sed tortor leo. Aliquam placerat ligula urna. Nunc non tristique sem. Proin diam risus, eleifend sit amet consectetur nec, aliquam ut erat. Aliquam quis nulla vitae sem tincidunt vehicula blandit ac eros. Nulla tincidunt vulputate tristique. Suspendisse potenti. Sed ante ipsum, rutrum vel sagittis ut, sollicitudin a dui. Fusce vel neque in diam malesuada faucibus et sit amet diam.
-        </p>
+          </p>
+        </div>
       </div>
     </div>
   </div>
